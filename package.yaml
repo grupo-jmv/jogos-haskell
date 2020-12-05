@@ -1,4 +1,4 @@
-name:    aulahaskell
+name:    jogos
 version: "0.0.0"
 
 dependencies:
@@ -67,7 +67,7 @@ library:
 
 # Runnable executable for our application
 executables:
-  aulahaskell:
+  jogos:
     main: main.hs
     source-dirs: app
     ghc-options:
@@ -75,7 +75,7 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - aulahaskell
+    - jogos
     when:
     - condition: flag(library-only)
       buildable: false
