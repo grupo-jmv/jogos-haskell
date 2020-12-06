@@ -14,7 +14,8 @@
     DESENVOLVEDORAS
     $forall Entity pid desenvolvedora <- desenvolvedoras
         <li>
-            #{desenvolvedoraNome desenvolvedora}
+            <a href=@{DesenvolvedoraEditarR pid}>
+                #{desenvolvedoraNome desenvolvedora}
 
 <a href=@{HomeR}>
     Voltar
