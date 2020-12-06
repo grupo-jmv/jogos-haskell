@@ -3,11 +3,13 @@
 /favicon.ico FaviconR GET
 /robots.txt RobotsR GET
 
-/ HomeR GET 
-/p1 Page1R GET
-/p2 Page2R GET
+/ HomeR GET
 
 /cadastro UsuarioR GET POST
 /entrar   EntrarR  GET POST
 /sair     SairR    POST
 /admin    AdminR   GET
+
+/desenvolvedoras          DesenvolvedorasR    GET
+/desenvolvedora           DesenvolvedoraR     GET POST
+
