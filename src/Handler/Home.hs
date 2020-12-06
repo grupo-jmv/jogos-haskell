@@ -49,6 +49,14 @@ getHomeR = do
                     <a href=@{DesenvolvedoraR}>
                         DesenvolvedoraR
                 
+                <li>
+                    <a href=@{JogosR}>
+                        JogosR
+                
+                <li>
+                    <a href=@{JogoR}>
+                        JogoR
+                
                 $maybe nome <- sess
                     <li>
                         <div>
