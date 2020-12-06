@@ -14,4 +14,5 @@
 /desenvolvedora                             DesenvolvedoraR         GET POST
 /desenvolvedora/#DesenvolvedoraId/editar    DesenvolvedoraEditarR   GET POST
 /desenvolvedora/#DesenvolvedoraId/remover   DesenvolvedoraRemoverR  POST
-
+/jogos      JogosR      GET
+/jogo       JogoR       GET POST
