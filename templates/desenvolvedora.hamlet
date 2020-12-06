@@ -1,0 +1,9 @@
+<h1>
+    DESENVOLVEDORA
+    
+<form method=post action=@{DesenvolvedoraR}>
+    ^{widget}
+    <input type="submit" value="Cadastrar">
+
+<a href=@{HomeR}>
+    Voltar
