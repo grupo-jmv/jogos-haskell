@@ -1,0 +1,9 @@
+<h1>
+    JOGO
+    
+<form method=post action=@{JogoR}>
+    ^{widget}
+    <input type="submit" value="Cadastrar">
+
+<a href=@{HomeR}>
+    Voltar
