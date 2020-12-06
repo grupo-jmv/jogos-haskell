@@ -12,6 +12,9 @@
 
 <h1>
     DESENVOLVEDORAS
+    $forall Entity pid desenvolvedora <- desenvolvedoras
+        <li>
+            #{desenvolvedoraNome desenvolvedora}
 
 <a href=@{HomeR}>
     Voltar
