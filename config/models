@@ -7,3 +7,8 @@ Usuario
 
 Desenvolvedora
     nome            Text
+
+Jogo
+    nome            Text
+    lancamento      Day
+    desenvolvedora  DesenvolvedoraId
