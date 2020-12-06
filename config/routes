@@ -10,6 +10,7 @@
 /sair     SairR    POST
 /admin    AdminR   GET
 
-/desenvolvedoras          DesenvolvedorasR    GET
-/desenvolvedora           DesenvolvedoraR     GET POST
+/desenvolvedoras                            DesenvolvedorasR        GET
+/desenvolvedora                             DesenvolvedoraR         GET POST
+/desenvolvedora/#DesenvolvedoraId/editar    DesenvolvedoraEditarR   GET POST
 
