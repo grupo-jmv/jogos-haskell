@@ -53,7 +53,7 @@ getEntrarR = do
 
                 <div class="jumbotron">
                     <h1>
-                        Login de ussuário
+                        Login de usuário
                     <div>
                         $maybe mensa <- msg 
                             <div>

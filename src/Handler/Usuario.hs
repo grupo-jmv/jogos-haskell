@@ -29,16 +29,43 @@ getUsuarioR = do
         addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_style_css)
         [whamlet|
-            $maybe mensa <- msg 
-                <div>
-                    ^{mensa}
-            
-            <h1>
-                CADASTRO DE USUARIO
-            
-            <form method=post action=@{UsuarioR}>
-                ^{widget}
-                <input type="submit" value="Cadastrar">
+            <div class="container">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href=@{HomeR}>
+                                <img src=@{StaticR joystic_png} class="img-menu">
+
+                        <div id="navbar" class="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href=@{DesenvolvedorasR}>
+                                        Lista de desenvolvedoras
+                                
+                                <li>
+                                    <a href=@{DesenvolvedoraR}>
+                                        Cadastrar desenvolvedoras
+                                
+                                <li>
+                                    <a href=@{JogosR}>
+                                        Lista de jogos
+                                
+                                <li>
+                                    <a href=@{JogoR}>
+                                        Cadastrar jogos
+
+                <div class="jumbotron">
+                    <h1>
+                        Cadastro de usuário
+                    
+                    <div>
+                        $maybe mensa <- msg 
+                            <div>
+                                ^{mensa}
+                    
+                    <form method=post action=@{UsuarioR}>
+                        ^{widget}
+                        <input type="submit" class="btn btn-default" value="Cadastrar">
         |]
 
 postUsuarioR :: Handler Html
