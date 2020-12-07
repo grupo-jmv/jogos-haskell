@@ -1,26 +1,65 @@
-<nav>
-    $maybe nome <- sess
-        <li>
-            <div>
-                Ola #{nome}
-            <form method=post action=@{SairR}>
-                <input type="submit" value="Sair">
-    $nothing
-        <li>
-            <div>
-                convidado
+<div class="container">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href=@{HomeR}>
+                    <img src=@{StaticR joystic_png} class="img-menu">
 
-<img src=@{StaticR desenvolvedora_png} class="img-jogos">
+            <div id="navbar" class="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href=@{DesenvolvedorasR}>
+                            Lista de desenvolvedoras
+                    
+                    <li>
+                        <a href=@{DesenvolvedoraR}>
+                            Cadastrar desenvolvedoras
+                    
+                    <li>
+                        <a href=@{JogosR}>
+                            Lista de jogos
+                    
+                    <li>
+                        <a href=@{JogoR}>
+                            Cadastrar jogos
 
-<h1>
-    DESENVOLVEDORAS
-    $forall Entity pid desenvolvedora <- desenvolvedoras
-        <li>
-            <a href=@{DesenvolvedoraEditarR pid}>
-                #{desenvolvedoraNome desenvolvedora}
-            $maybe nome <- sess
-                <form action=@{DesenvolvedoraRemoverR pid} method=post>
-                    <input type="submit" value="Remover">
 
-<a href=@{HomeR}>
-    Voltar
+              
+                <ul class="nav navbar-nav navbar-right">
+                    $maybe nome <- sess
+                        <li class="active">
+                            <p class="navbar-text">
+                                Logado como #{nome}
+                        <li class="active botao-sair">
+                            <form method=post action=@{SairR}>
+                                <input type="submit" class="btn btn-default" value="Sair">
+                    $nothing
+                        <li class="active">
+                            <p class="navbar-text">
+                                Não logado
+                        <li class="active">
+                            <a href=@{EntrarR} class="btn btn-default">
+                                Entrar
+    <div class="jumbotron">
+        <h1>
+            Desenvolvedoras cadastradas
+        
+        $maybe nome <- sess
+            <p>
+                É necessário se autenticar para editar e remover um jogo
+
+        <ul class="list-group">
+            $forall Entity pid desenvolvedora <- desenvolvedoras
+                <li class="list-group-item">
+                    <a href=@{DesenvolvedoraEditarR pid}>
+                        #{desenvolvedoraNome desenvolvedora}
+                    $maybe nome <- sess
+                        <form action=@{DesenvolvedoraRemoverR pid} class="form-lista" method=post>
+                            <input type="submit" class="btn btn-danger btn-sm" value="Remover">
+        
+    <div class="jumbotron">
+        <h1>
+            Cadastrar desenvolvedora
+        <p>
+            <a class="btn btn-primary" href=@{DesenvolvedoraR} role="button">
+                Cadastrar desenvolvedora »
