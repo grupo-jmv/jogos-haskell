@@ -10,6 +10,8 @@
             <div>
                 convidado
 
+<img src=@{StaticR desenvolvedora_png} class="img-jogos">
+
 <h1>
     DESENVOLVEDORAS
     $forall Entity pid desenvolvedora <- desenvolvedoras

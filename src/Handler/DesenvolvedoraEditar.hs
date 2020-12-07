@@ -16,7 +16,9 @@ getDesenvolvedoraEditarR pid = do
 formEditarDesenvolvedora :: Route App -> Maybe Desenvolvedora -> Handler Html
 formEditarDesenvolvedora rt dado = do
     (widget, _) <- generateFormPost (formDesenvolvedora dado)
-    defaultLayout $ do 
+    defaultLayout $ do
+        addStylesheet (StaticR css_bootstrap_css)
+        addStylesheet (StaticR css_style_css)
         $(whamletFile "templates/desenvolvedoraeditar.hamlet")
 
 formDesenvolvedora :: Maybe Desenvolvedora -> Form Desenvolvedora

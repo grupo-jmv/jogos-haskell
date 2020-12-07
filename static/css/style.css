@@ -1,0 +1,15 @@
+.img-jogos {
+    height: 500px;
+}
+
+.img-menu {
+    height: -webkit-fill-available;
+}
+
+.jumbotron h1 {
+    font-size: 23px;
+}
+
+.jumbotron p {
+    font-size: 18px;
+}

@@ -22,7 +22,9 @@ getEntrarR :: Handler Html
 getEntrarR = do 
     (widget,_) <- generateFormPost formLogin
     msg <- getMessage
-    defaultLayout $ 
+    defaultLayout $ do
+        addStylesheet (StaticR css_bootstrap_css)
+        addStylesheet (StaticR css_style_css)
         [whamlet|
             $maybe mensa <- msg 
                 <div>
@@ -72,10 +74,13 @@ postSairR = do
 
 getAdminR :: Handler Html
 getAdminR = do 
-    defaultLayout [whamlet|
-        <h1>
-            BEM-VINDO MEU REI!
-    |]
+    defaultLayout $ do
+        addStylesheet (StaticR css_bootstrap_css)
+        addStylesheet (StaticR css_style_css)
+        [whamlet|
+            <h1>
+                BEM-VINDO MEU REI!
+        |]
 
 
 

@@ -17,6 +17,8 @@ formEditarJogo :: Route App -> Maybe Jogo -> Handler Html
 formEditarJogo rt dado = do
     (widget, _) <- generateFormPost (formJogo dado)
     defaultLayout $ do 
+        addStylesheet (StaticR css_bootstrap_css)
+        addStylesheet (StaticR css_style_css)
         $(whamletFile "templates/jogoeditar.hamlet")
 
 formJogo :: Maybe Jogo -> Form Jogo

@@ -11,7 +11,9 @@ import Database.Persist.Postgresql
 getDesenvolvedoraR :: Handler Html 
 getDesenvolvedoraR = do 
     (widget, _) <- generateFormPost formDesenvolvedora
-    defaultLayout $ do 
+    defaultLayout $ do
+        addStylesheet (StaticR css_bootstrap_css)
+        addStylesheet (StaticR css_style_css)
         $(whamletFile "templates/desenvolvedora.hamlet")
 
 postDesenvolvedoraR :: Handler Html

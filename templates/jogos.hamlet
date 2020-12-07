@@ -10,6 +10,8 @@
             <div>
                 convidado
 
+<img src=@{StaticR jogos_jpg} class="img-jogos">
+
 <h1>
     JOGOS
     $forall Entity pid jogo <- jogos

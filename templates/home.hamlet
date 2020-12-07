@@ -1,0 +1,69 @@
+<div class="container">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href=@{HomeR}>
+                    <img src=@{StaticR joystic_png} class="img-menu">
+
+            <div id="navbar" class="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href=@{DesenvolvedorasR}>
+                            Lista de desenvolvedoras
+                    
+                    <li>
+                        <a href=@{DesenvolvedoraR}>
+                            Cadastrar desenvolvedoras
+                    
+                    <li>
+                        <a href=@{JogosR}>
+                            Lista de jogos
+                    
+                    <li>
+                        <a href=@{JogoR}>
+                            Cadastrar jogos
+
+
+              
+                <ul class="nav navbar-nav navbar-right">
+                    $maybe nome <- sess
+                        <li class="active">
+                            <p class="navbar-text">
+                                Logado como #{nome}
+                        <li class="active">
+                            <a href=@{SairR} class="btn btn-light">
+                                Sair
+                    $nothing
+                        <li class="active">
+                            <p>
+                                Não logado
+                        <li class="active">
+                            <a href=@{EntrarR} class="btn btn-light">
+                                Entrar
+
+    <div class="jumbotron">
+        <h1>
+            Cadastrar usuário
+        <p>
+            Crie um usuário para ter permissão de criar e editar desenvolvedoras e jogos.
+        <p>
+            <a class="btn btn-primary" href=@{UsuarioR} role="button">
+                Criar usuáio »
+    
+    <div class="jumbotron">
+        <h1>
+            Cadastrar desenvolvedora
+        <p>
+            Cadastre uma desenvolvedora para registrá-la em um jogo.
+        <p>
+            <a class="btn btn-primary" href=@{DesenvolvedorasR} role="button">
+                Cadastrar desenvolvedora »
+    
+    <div class="jumbotron">
+        <h1>
+            Cadastrar jogo
+        <p>
+            Cadastre um jogo, com seu nome, data de lançamento e uma desenvolvedora
+        <p>
+            <a class="btn btn-primary" href=@{JogosR} role="button">
+                Cadastrar jogo »
