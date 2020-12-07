@@ -47,3 +47,6 @@
         <form method=post action=@{rt}>
             ^{widget}
             <input type="submit" class="btn btn-success" value="Atualizar">
+        
+        <a href=@{JogosR} class="btn btn-default">
+            Voltar para lista
