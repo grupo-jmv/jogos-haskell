@@ -17,3 +17,4 @@
 /jogos                  JogosR          GET
 /jogo                   JogoR           GET POST
 /jogo/#JogoId/editar    JogoEditarR     GET POST
+/jogo/#JogoId/remover   JogoRemoverR    POST
