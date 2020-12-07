@@ -47,6 +47,7 @@ import Handler.DesenvolvedoraEditar
 import Handler.DesenvolvedoraRemover
 import Handler.Jogo
 import Handler.Jogos
+import Handler.JogoEditar
 
 -- This line actually creates our YesodDispatch instance. It is the second half
 -- of the call to mkYesodData which occurs in Foundation.hs. Please see the
