@@ -1,9 +1,52 @@
-<h1>
-    ATUALIZAR DESENVOLVEDORA
-    
-<form method=post action=@{rt}>
-    ^{widget}
-    <input type="submit" value="Atualizar">
+<div class="container">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href=@{HomeR}>
+                    <img src=@{StaticR joystic_png} class="img-menu">
 
-<a href=@{HomeR}>
-    Voltar
+            <div id="navbar" class="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href=@{DesenvolvedorasR}>
+                            Lista de desenvolvedoras
+                    
+                    <li>
+                        <a href=@{DesenvolvedoraR}>
+                            Cadastrar desenvolvedoras
+                    
+                    <li>
+                        <a href=@{JogosR}>
+                            Lista de jogos
+                    
+                    <li>
+                        <a href=@{JogoR}>
+                            Cadastrar jogos
+
+
+              
+                <ul class="nav navbar-nav navbar-right">
+                    $maybe nome <- sess
+                        <li class="active">
+                            <p class="navbar-text">
+                                Logado como #{nome}
+                        <li class="active botao-sair">
+                            <form method=post action=@{SairR}>
+                                <input type="submit" class="btn btn-default" value="Sair">
+                    $nothing
+                        <li class="active">
+                            <p class="navbar-text">
+                                Não logado
+                        <li class="active">
+                            <a href=@{EntrarR} class="btn btn-default">
+                                Entrar
+    <div class="jumbotron">
+        <h1>
+            Atualizar desenvolvedora
+            
+        <form method=post action=@{rt}>
+            ^{widget}
+            <input type="submit" class="btn btn-success" value="Atualizar">
+        
+        <a href=@{DesenvolvedorasR} class="btn btn-default">
+            Voltar para lista
