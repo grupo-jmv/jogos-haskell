@@ -35,6 +35,7 @@ instance Yesod App where
     isAuthorized DesenvolvedoraR _ = isAdmin
     isAuthorized JogosR _ = return Authorized
     isAuthorized JogoR _ = isAdmin
+    isAuthorized JogoEditarR _ = isAdmin
     isAuthorized _ _ = isUsuario
 
 isAdmin :: Handler AuthResult
