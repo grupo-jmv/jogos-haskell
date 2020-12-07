@@ -14,7 +14,8 @@
     JOGOS
     $forall Entity pid jogo <- jogos
         <li>
-            #{jogoNome jogo}
+            <a href=@{JogoEditarR pid}>
+                #{jogoNome jogo}
 
 <a href=@{HomeR}>
     Voltar
