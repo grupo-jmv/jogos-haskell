@@ -12,6 +12,7 @@ getJogoR :: Handler Html
 getJogoR = do 
     (widget, _) <- generateFormPost formJogo
     defaultLayout $ do 
+        sess <- lookupSession "_NOME"
         addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_style_css)
         $(whamletFile "templates/jogo.hamlet")

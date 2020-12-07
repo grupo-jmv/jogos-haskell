@@ -26,16 +26,42 @@ getEntrarR = do
         addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_style_css)
         [whamlet|
-            $maybe mensa <- msg 
-                <div>
-                    ^{mensa}
-            
-            <h1>
-                ENTRAR
-            
-            <form method=post action=@{EntrarR}>
-                ^{widget}
-                <input type="submit" value="Entrar">
+            <div class="container">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href=@{HomeR}>
+                                <img src=@{StaticR joystic_png} class="img-menu">
+
+                        <div id="navbar" class="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href=@{DesenvolvedorasR}>
+                                        Lista de desenvolvedoras
+                                
+                                <li>
+                                    <a href=@{DesenvolvedoraR}>
+                                        Cadastrar desenvolvedoras
+                                
+                                <li>
+                                    <a href=@{JogosR}>
+                                        Lista de jogos
+                                
+                                <li>
+                                    <a href=@{JogoR}>
+                                        Cadastrar jogos
+
+                <div class="jumbotron">
+                    <h1>
+                        Login de ussuário
+                    <div>
+                        $maybe mensa <- msg 
+                            <div>
+                                ^{mensa}
+                        
+                        <form method=post action=@{EntrarR}>
+                            ^{widget}
+                            <input type="submit" class="btn btn-default" value="Entrar">
         |]
 
 postEntrarR :: Handler Html
@@ -44,15 +70,15 @@ postEntrarR = do
     case result of 
         FormSuccess ("root@root.com","root125") -> do 
             setSession "_NOME" "admin"
-            redirect AdminR
+            redirect HomeR
         FormSuccess (email,senha) -> do 
            -- select * from usuario where email=digitado.email
            usuario <- runDB $ getBy (UniqueEmailIx email)
            case usuario of 
                 Nothing -> do 
                     setMessage [shamlet|
-                        <div>
-                            E-mail N ENCONTRADO!
+                        <span class="label label-danger">
+                            E-mail não encontrado.
                     |]
                     redirect EntrarR
                 Just (Entity _ usu) -> do 
@@ -71,17 +97,3 @@ postSairR :: Handler Html
 postSairR = do 
     deleteSession "_NOME"
     redirect HomeR
-
-getAdminR :: Handler Html
-getAdminR = do 
-    defaultLayout $ do
-        addStylesheet (StaticR css_bootstrap_css)
-        addStylesheet (StaticR css_style_css)
-        [whamlet|
-            <h1>
-                BEM-VINDO MEU REI!
-        |]
-
-
-
-

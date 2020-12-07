@@ -30,15 +30,15 @@
                         <li class="active">
                             <p class="navbar-text">
                                 Logado como #{nome}
-                        <li class="active">
-                            <a href=@{SairR} class="btn btn-light">
-                                Sair
+                        <li class="active botao-sair">
+                            <form method=post action=@{SairR}>
+                                <input type="submit" class="btn btn-default" value="Sair">
                     $nothing
                         <li class="active">
-                            <p>
+                            <p class="navbar-text">
                                 Não logado
                         <li class="active">
-                            <a href=@{EntrarR} class="btn btn-light">
+                            <a href=@{EntrarR} class="btn btn-default">
                                 Entrar
 
     <div class="jumbotron">
@@ -65,5 +65,5 @@
         <p>
             Cadastre um jogo, com seu nome, data de lançamento e uma desenvolvedora
         <p>
-            <a class="btn btn-primary" href=@{JogosR} role="button">
+            <a class="btn btn-primary" href=@{JogoR} role="button">
                 Cadastrar jogo »
