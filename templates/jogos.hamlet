@@ -16,6 +16,9 @@
         <li>
             <a href=@{JogoEditarR pid}>
                 #{jogoNome jogo}
+            $maybe nome <- sess
+                <form action=@{JogoRemoverR pid} method=post>
+                    <input type="submit" value="Remover">
 
 <a href=@{HomeR}>
     Voltar
