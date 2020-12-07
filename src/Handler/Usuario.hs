@@ -76,14 +76,14 @@ postUsuarioR = do
             if (usuarioSenha usuario == veri) then do 
                 runDB $ insert usuario 
                 setMessage [shamlet|
-                    <div>
-                        USUARIO INCLUIDO
+                    <span class="label label-success">
+                        Usuário criado com sucesso
                 |]
                 redirect UsuarioR
             else do 
                 setMessage [shamlet|
-                    <div>
-                        SENHA E VERIFICACAO N CONFEREM
+                    <span class="label label-warning">
+                        Senha e verificação não conferem
                 |]
                 redirect UsuarioR
         _ -> redirect HomeR
