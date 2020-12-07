@@ -12,6 +12,7 @@ getDesenvolvedoraR :: Handler Html
 getDesenvolvedoraR = do 
     (widget, _) <- generateFormPost formDesenvolvedora
     defaultLayout $ do
+        sess <- lookupSession "_NOME"
         addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_style_css)
         $(whamletFile "templates/desenvolvedora.hamlet")
