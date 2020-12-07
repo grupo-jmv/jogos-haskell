@@ -5,7 +5,7 @@ database:
   # would like to have environment variable overrides, you could instead use
   # something like:
   #
-  #   database: "_env:PGDATABASE:jogos_LOWER_test"
-  database: jogos_LOWER_test
+  #   database: "_env:PGDATABASE:jogosdigitais_LOWER_test"
+  database: jogosdigitais_LOWER_test
 
 auth-dummy-login: true

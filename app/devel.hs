@@ -1,5 +1,5 @@
 {-# LANGUAGE PackageImports #-}
-import "jogos" Application (develMain)
+import "jogosdigitais" Application (develMain)
 import Prelude (IO)
 
 main :: IO ()

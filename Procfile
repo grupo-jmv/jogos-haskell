@@ -1,1 +1,1 @@
-web: jogos
+web: jogosdigitais

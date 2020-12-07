@@ -15,8 +15,8 @@ stanzas:
     #
     # The path given is for Stack projects. If you're still using cabal, change
     # to
-    # exec: ../dist/build/jogos/jogos
-    exec: ../dist/bin/jogos
+    # exec: ../dist/build/jogosdigitais/jogosdigitais
+    exec: ../dist/bin/jogosdigitais
 
     # Command line options passed to your application.
     args: []
@@ -25,7 +25,7 @@ stanzas:
       # You can specify one or more hostnames for your application to respond
       # to. The primary hostname will be used for generating your application
       # root.
-      - www.jogos.com
+      - www.jogosdigitais.com
 
     # Enable to force Keter to redirect to https
     # Can be added to any stanza
@@ -34,7 +34,7 @@ stanzas:
   # Static files.
   - type: static-files
     hosts:
-      - static.jogos.com
+      - static.jogosdigitais.com
     root: ../static
 
     # Uncomment to turn on directory listings.
@@ -44,9 +44,9 @@ stanzas:
   - type: redirect
 
     hosts:
-      - jogos.com
+      - jogosdigitais.com
     actions:
-      - host: www.jogos.com
+      - host: www.jogosdigitais.com
         # secure: false
         # port: 80
 
